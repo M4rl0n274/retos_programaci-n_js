@@ -12,5 +12,29 @@ for (let y = 0; y <= 9; y++) {
   temp = a + b;
   a = b;
   b = temp;
-  console.log( temp + " + " + a + " = " + a);
+  console.log(temp + " + " + a + " = " + a);
+}
+
+//* Solución 2
+
+const prompt = require("prompt-sync")();
+
+let detener = Number(
+  prompt("Dígite números de la secuencia Fibonacci desea imprimir: ")
+);
+
+if (detener <= 0) {
+  console.log("Ingrese un valor mayor a 0");
+} else {
+  let c = 1;
+  let d = 0;
+  let temporary;
+
+  for (let y = 0; y < detener; y++) {
+    //console.log(a);
+    temporary = c + d;
+    c = d;
+    d = temporary;
+    console.log(temporary + " + " + c + " = " + d);
+  }
 }
